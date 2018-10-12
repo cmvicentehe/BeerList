@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BeerListVC.swift
 //  BeerList
 //
 //  Created by Carlos Manuel Vicente Herrero on 12/10/2018.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class BeerListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
 }
-

@@ -1,0 +1,13 @@
+//
+//  Config.xcconfig
+//  BeerList
+//
+//  Created by Carlos Manuel Vicente Herrero on 12/10/2018.
+//  Copyright © 2018 Carlos Manuel Vicente Herrero. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+HOST_URL = api.brewerydb.com/v2/
+BREWERY_API_KEY = 40759fb26d1c95525eccb893e9c7e06c
