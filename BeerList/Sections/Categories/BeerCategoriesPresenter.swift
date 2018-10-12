@@ -45,7 +45,7 @@ extension CategoriesPresenter: CategoriesPresenterInput {
     }
     
     func userDidReceiveError(_ message: String) {
-        
+        self.wireframe.showError(message: message)
     }
 }
 
