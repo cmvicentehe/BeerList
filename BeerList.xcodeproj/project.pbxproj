@@ -18,7 +18,7 @@
 		D4E79E2C2170A888006F4225 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E2A2170A888006F4225 /* Response.swift */; };
 		D4E79E312170B08A006F4225 /* BeerCategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E302170B08A006F4225 /* BeerCategoriesInteractor.swift */; };
 		D4E79E332170B0A8006F4225 /* BeerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E322170B0A8006F4225 /* BeerCategory.swift */; };
-		D4E79E352170B125006F4225 /* BeerCategoryWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E342170B125006F4225 /* BeerCategoryWireframe.swift */; };
+		D4E79E352170B125006F4225 /* BeerCategoriesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E342170B125006F4225 /* BeerCategoriesWireframe.swift */; };
 		D4E79E372170B162006F4225 /* BeerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E362170B162006F4225 /* BeerListVC.swift */; };
 		D4E79E3A2170B248006F4225 /* BeerCategories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E79E382170B248006F4225 /* BeerCategories.storyboard */; };
 		D4E79E3B2170B248006F4225 /* BeerCategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E392170B248006F4225 /* BeerCategoriesPresenter.swift */; };
@@ -33,6 +33,8 @@
 		D4E79E4D2170B8F5006F4225 /* BeerDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E4C2170B8F5006F4225 /* BeerDetailPresenter.swift */; };
 		D4E79E4F2170B908006F4225 /* BeerDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E4E2170B908006F4225 /* BeerDetailInteractor.swift */; };
 		D4E79E512170B91A006F4225 /* BeerDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E502170B91A006F4225 /* BeerDetailWireframe.swift */; };
+		D4E79E532170DD72006F4225 /* BeerCategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E522170DD72006F4225 /* BeerCategoriesService.swift */; };
+		D4E79E552170E235006F4225 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E79E542170E235006F4225 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +64,7 @@
 		D4E79E2A2170A888006F4225 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		D4E79E302170B08A006F4225 /* BeerCategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCategoriesInteractor.swift; sourceTree = "<group>"; };
 		D4E79E322170B0A8006F4225 /* BeerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCategory.swift; sourceTree = "<group>"; };
-		D4E79E342170B125006F4225 /* BeerCategoryWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCategoryWireframe.swift; sourceTree = "<group>"; };
+		D4E79E342170B125006F4225 /* BeerCategoriesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCategoriesWireframe.swift; sourceTree = "<group>"; };
 		D4E79E362170B162006F4225 /* BeerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListVC.swift; sourceTree = "<group>"; };
 		D4E79E382170B248006F4225 /* BeerCategories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BeerCategories.storyboard; sourceTree = "<group>"; };
 		D4E79E392170B248006F4225 /* BeerCategoriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerCategoriesPresenter.swift; sourceTree = "<group>"; };
@@ -77,6 +79,8 @@
 		D4E79E4C2170B8F5006F4225 /* BeerDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailPresenter.swift; sourceTree = "<group>"; };
 		D4E79E4E2170B908006F4225 /* BeerDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailInteractor.swift; sourceTree = "<group>"; };
 		D4E79E502170B91A006F4225 /* BeerDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailWireframe.swift; sourceTree = "<group>"; };
+		D4E79E522170DD72006F4225 /* BeerCategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCategoriesService.swift; sourceTree = "<group>"; };
+		D4E79E542170E235006F4225 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 		D4E79E162170A464006F4225 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				D4E79E542170E235006F4225 /* Result.swift */,
 				D4E79E282170A888006F4225 /* Network */,
 				D4E79E262170A79E006F4225 /* Constants.swift */,
 			);
@@ -199,7 +204,8 @@
 				D4E79E302170B08A006F4225 /* BeerCategoriesInteractor.swift */,
 				D4E79E1B2170A464006F4225 /* BeerCategoriesVC.swift */,
 				D4E79E322170B0A8006F4225 /* BeerCategory.swift */,
-				D4E79E342170B125006F4225 /* BeerCategoryWireframe.swift */,
+				D4E79E342170B125006F4225 /* BeerCategoriesWireframe.swift */,
+				D4E79E522170DD72006F4225 /* BeerCategoriesService.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 			files = (
 				D4E79E212170A465006F4225 /* BeerCategoriesVC.swift in Sources */,
 				D4E79E372170B162006F4225 /* BeerListVC.swift in Sources */,
+				D4E79E532170DD72006F4225 /* BeerCategoriesService.swift in Sources */,
 				D4E79E2B2170A888006F4225 /* NetworkClient.swift in Sources */,
 				D4E79E202170A465006F4225 /* AppDelegate.swift in Sources */,
 				D4E79E4F2170B908006F4225 /* BeerDetailInteractor.swift in Sources */,
@@ -335,8 +342,9 @@
 				D4E79E412170B450006F4225 /* Beer.swift in Sources */,
 				D4E79E4B2170B8DB006F4225 /* BeerDetailVC.swift in Sources */,
 				D4E79E4D2170B8F5006F4225 /* BeerDetailPresenter.swift in Sources */,
+				D4E79E552170E235006F4225 /* Result.swift in Sources */,
 				D4E79E252170A5E9006F4225 /* Config.swift in Sources */,
-				D4E79E352170B125006F4225 /* BeerCategoryWireframe.swift in Sources */,
+				D4E79E352170B125006F4225 /* BeerCategoriesWireframe.swift in Sources */,
 				D4E79E512170B91A006F4225 /* BeerDetailWireframe.swift in Sources */,
 				D4E79E3B2170B248006F4225 /* BeerCategoriesPresenter.swift in Sources */,
 				D4E79E2C2170A888006F4225 /* Response.swift in Sources */,
@@ -381,6 +389,7 @@
 /* Begin XCBuildConfiguration section */
 		D4E79E062170A387006F4225 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4E79E232170A5C4006F4225 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -430,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -442,6 +451,7 @@
 		};
 		D4E79E072170A387006F4225 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4E79E232170A5C4006F4225 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -485,7 +495,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -497,6 +507,7 @@
 		};
 		D4E79E092170A387006F4225 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4E79E232170A5C4006F4225 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -516,6 +527,7 @@
 		};
 		D4E79E0A2170A387006F4225 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4E79E232170A5C4006F4225 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -534,6 +546,7 @@
 		};
 		D4E79E0C2170A387006F4225 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4E79E232170A5C4006F4225 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -554,6 +567,7 @@
 		};
 		D4E79E0D2170A387006F4225 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4E79E232170A5C4006F4225 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

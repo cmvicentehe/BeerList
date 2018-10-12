@@ -9,5 +9,5 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-HOST_URL = api.brewerydb.com/v2/
+HOST_URL = api.brewerydb.com
 BREWERY_API_KEY = 40759fb26d1c95525eccb893e9c7e06c

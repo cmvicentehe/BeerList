@@ -11,14 +11,10 @@ import Foundation
 struct NetworkClient {
         let urlSession: URLSession
         
-        init(urlSession: URLSession) {
+        init(urlSession: URLSession = URLSession(configuration: URLSessionConfiguration.default)) {
             self.urlSession = urlSession
         }
-        
-        init() {
-            let urlSession = URLSession(configuration: URLSessionConfiguration.default)
-            self.init(urlSession: urlSession)
-        }
+    
     
     func performRequest(for urlRequest: URLRequest, completion: @escaping (Response?) -> Void)  {
             var urlResponse: Response? = nil

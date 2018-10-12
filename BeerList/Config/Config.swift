@@ -9,7 +9,6 @@
 import Foundation
 
 struct Config {
-    private static let host = Bundle.main.object(forInfoDictionaryKey: Constants.hostUrl)
-    static let hostUrl = "https://\(String(describing: host))"
-    static let apiKey =  Bundle.main.object(forInfoDictionaryKey: Constants.apiKey) as? String
+    static let hostUrl: String = Bundle.main.object(forInfoDictionaryKey: Constants.hostUrl) as? String ?? ""
+    static let apiKey: String = Bundle.main.object(forInfoDictionaryKey: Constants.apiKey) as? String ?? ""
 }

@@ -7,3 +7,38 @@
 //
 
 import Foundation
+
+protocol BeerCategoriesInteractorInput {
+    func fetchCategories()
+}
+
+protocol BeerCategoriesInteractorOutput {
+    func retrievedCategories(_ categories: [BeerCategory])
+    func retrievedError(_ error: CategoryError)
+}
+
+class BeerCategoriesInteractor {
+    var service: BeerCategoriesServiceInput
+    var presenter: BeerCategoriesInteractorOutput?
+    
+    init(service: BeerCategoriesServiceInput) {
+        self.service = service
+    }
+}
+
+extension BeerCategoriesInteractor: BeerCategoriesInteractorInput {
+    func fetchCategories() {
+        self.service.fetchCategories()
+    }
+}
+
+extension BeerCategoriesInteractor: BeerCategoryServiceOutput {
+    func categoriesRetrieved(with result:  Result<[BeerCategory], CategoryError>) {
+        switch result {
+        case .success(let categories):
+            self.presenter?.retrievedCategories(categories)
+        case .error(let error):
+            self.presenter?.retrievedError(error)
+        }
+    }
+}

@@ -8,7 +8,14 @@
 
 import Foundation
 
+struct BeerCategoryList: Codable {
+    enum CodingKeys : String, CodingKey {
+        case categories = "data"
+    }
+    let categories: [BeerCategory]
+}
+
 struct BeerCategory: Codable {
-    let id: String
+    let id: Int
     let name: String
 }
