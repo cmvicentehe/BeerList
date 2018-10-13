@@ -77,6 +77,8 @@ extension BeerCategoriesService: BeerCategoriesServiceInput {
             }
             guard let categories = self.parse(data) else {
                 print("Invalid category list")
+                let result = Result<[BeerCategory], CategoryError>.success([])
+                self.interactor?.categoriesRetrieved(with: result)
                 return
             }
             

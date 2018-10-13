@@ -9,17 +9,19 @@
 import Foundation
 
 protocol BeerCategoriesInteractorInput {
+    var categories: [BeerCategory]? { get }
     func fetchCategories()
 }
 
-protocol BeerCategoriesInteractorOutput {
+protocol BeerCategoriesInteractorOutput: class {
     func retrievedCategories(_ categories: [BeerCategory])
     func retrievedError(_ error: CategoryError)
 }
 
 class BeerCategoriesInteractor {
     var service: BeerCategoriesServiceInput
-    var presenter: BeerCategoriesInteractorOutput?
+    weak var presenter: BeerCategoriesInteractorOutput?
+    var categories: [BeerCategory]?
     
     init(service: BeerCategoriesServiceInput) {
         self.service = service
@@ -36,6 +38,7 @@ extension BeerCategoriesInteractor: BeerCategoryServiceOutput {
     func categoriesRetrieved(with result:  Result<[BeerCategory], CategoryError>) {
         switch result {
         case .success(let categories):
+            self.categories = categories
             self.presenter?.retrievedCategories(categories)
         case .error(let error):
             self.presenter?.retrievedError(error)

@@ -14,7 +14,6 @@ class BeerCategoriesVC: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var presenter: CategoriesPresenterInput?
-    var categories: [BeerCategory]?
 
     // MARK: View life cycle
     override func viewDidLoad() {
@@ -27,7 +26,6 @@ class BeerCategoriesVC: UIViewController {
 extension BeerCategoriesVC: CategoriesUI {
 
     func show(categories: [BeerCategory]) {
-          self.categories = categories
         DispatchQueue.main.async {
             self.categoriesTableView.reloadData()
         }
@@ -56,13 +54,13 @@ extension BeerCategoriesVC: CategoriesUI {
 
 extension BeerCategoriesVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return self.categories?.count ?? 0
+       return self.presenter?.categories?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: Constants.categoryCell, for: indexPath)
         
-        if let beerCategory = self.categories?[indexPath.row] {
+        if let beerCategory = self.presenter?.categories?[indexPath.row] {
             cell.textLabel?.text = beerCategory.name
             cell.detailTextLabel?.text = String(beerCategory.id)
         }
@@ -73,7 +71,7 @@ extension BeerCategoriesVC: UITableViewDataSource {
 
 extension BeerCategoriesVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let beerCategory = self.categories?[indexPath.row] else { return print("No category selected") }
+        guard let beerCategory = self.presenter?.categories?[indexPath.row] else { return print("No category selected") }
         
         self.presenter?.userDidTapCategory(beerCategory)
         self.categoriesTableView.deselectRow(at: indexPath, animated: true)

@@ -12,7 +12,7 @@ struct BeerCategoryList: Codable {
     enum CodingKeys : String, CodingKey {
         case categories = "data"
     }
-    let categories: [BeerCategory]
+    let categories: [BeerCategory]?
 }
 
 struct BeerCategory: Codable {

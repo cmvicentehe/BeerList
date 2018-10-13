@@ -12,8 +12,12 @@ struct Constants {
     // MARK: Endpoints
     static let scheme = "https"
     static let categories = "/v2/categories"
-    static let beers = "/beers"
+    static let beers = "/v2/beers"
     static let key = "key"
+    static let p = "p"
+    static let abv = "abv"
+    static let abvPlus10 = "+10"
+    static let abvMinus10 = "-10"
     
     // MARK: info-plist keys
     static let hostUrl = "HOST_URL"
@@ -31,4 +35,5 @@ struct Constants {
     
     // MARK: Cell identifiers
     static let categoryCell = "CategoryCell"
+    static let beerCollectionViewCell = "BeerCollectionViewCell"
 }

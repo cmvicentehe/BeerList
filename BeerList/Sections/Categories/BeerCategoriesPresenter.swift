@@ -15,7 +15,8 @@ protocol CategoriesUI: class {
     func hideActivityIndicator()
 }
 
-protocol CategoriesPresenterInput {    
+protocol CategoriesPresenterInput {
+    var categories: [BeerCategory]? { get }
     func viewDidLoad()
     func userDidTapCategory(_ category: BeerCategory)
     func userDidReceiveError(_ message: String)
@@ -23,8 +24,13 @@ protocol CategoriesPresenterInput {
 
 class CategoriesPresenter {
     weak var view: CategoriesUI?
-    var interactor: BeerCategoriesInteractorInput?
-    var categories: [BeerCategory]?
+    var categories: [BeerCategory]? {
+        get {
+          return self.interactor.categories
+        }
+        
+    }
+    var interactor: BeerCategoriesInteractorInput
     var wireframe: BeerCategoriesWireframeInput
     
     init(view: CategoriesUI, interactor: BeerCategoriesInteractorInput, wireframe: BeerCategoriesWireframeInput) {
@@ -36,7 +42,7 @@ class CategoriesPresenter {
 
 extension CategoriesPresenter: CategoriesPresenterInput {
     func viewDidLoad() {
-        self.interactor?.fetchCategories()
+        self.interactor.fetchCategories()
         self.view?.showActivityIndicator()
     }
     

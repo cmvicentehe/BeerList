@@ -10,7 +10,7 @@ import UIKit
 
 protocol BeerCategoriesWireframeInput {
     func showError(message: String)
-    func navigateToBeerList(for: BeerCategory)
+    func navigateToBeerList(for beerCategory: BeerCategory)
 }
 
 class BeerCategoriesWireframe {
@@ -48,7 +48,13 @@ extension BeerCategoriesWireframe: BeerCategoriesWireframeInput {
         self.navigationController?.present(alertController, animated: true, completion: nil)
     }
     
-    func navigateToBeerList(for: BeerCategory) {
-        // TODO: Implement!
+    func navigateToBeerList(for beerCategory: BeerCategory) {
+        
+        guard let navigationControllerNotNil = self.navigationController else {
+            print("Invalid navigation controller")
+            return
+        }
+        let beerListWireframe = BeerListWireframe(navigationController: navigationControllerNotNil)
+        beerListWireframe.showBeerList(by: beerCategory)
     }
 }

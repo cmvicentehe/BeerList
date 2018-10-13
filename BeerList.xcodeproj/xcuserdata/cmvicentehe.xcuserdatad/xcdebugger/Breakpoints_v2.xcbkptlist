@@ -57,13 +57,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BeerList/Sections/Categories/BeerCategoriesService.swift"
-            timestampString = "561074375.5406899"
+            filePath = "BeerList/Sections/Categories/BeerCategoriesVC.swift"
+            timestampString = "561164056.939658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "buildRequest()"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "hideActivityIndicator()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +73,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BeerList/Sections/Categories/BeerCategoriesVC.swift"
-            timestampString = "561074375.540772"
+            filePath = "BeerList/Sections/Categories/BeerCategoriesService.swift"
+            timestampString = "561164056.940343"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "hideActivityIndicator()"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "buildRequest()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
