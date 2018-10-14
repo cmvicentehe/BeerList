@@ -100,9 +100,10 @@ extension BeerListVC: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let margin = 10.0
         let numberOfItems = 3.0
+        let cellHeight = CGFloat(132)
         let width = (collectionView.bounds.width / CGFloat(numberOfItems)) - CGFloat((margin * 2)) // Margin left and right
 //        let yourHeight =
 
-        return CGSize(width: width, height: (width * 2)) // TODO: Search for dynamic calculation
+        return CGSize(width: width, height: cellHeight) // TODO: Search for dynamic calculation
     }
 }
