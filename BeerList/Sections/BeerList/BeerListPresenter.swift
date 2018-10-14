@@ -53,7 +53,7 @@ extension BeerListPresenter: BeerListPresenterInput {
     }
     
     func cell(for beer: Beer, completion: @escaping(Data) -> Void) {
-        guard let url = beer.label?.mediumUrl else { return print("Invalid image url") }
+        guard let url = beer.label?.iconUrl else { return print("Invalid image url") }
         self.interactor.fetchImage(from:url, completion: completion)
     }
     

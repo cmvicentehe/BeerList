@@ -69,14 +69,15 @@
                                             <constraint firstItem="Xog-gP-kcf" firstAttribute="trailing" secondItem="X7h-7W-qjb" secondAttribute="trailing" id="vIl-Fa-2fq"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="beer" destination="X7h-7W-qjb" id="kRr-BE-Wne"/>
-                                            <outlet property="beerName" destination="Gxj-Pa-zYm" id="oMg-zd-oae"/>
-                                            <outlet property="favorite" destination="Xog-gP-kcf" id="rFY-zu-C56"/>
+                                            <outlet property="beer" destination="X7h-7W-qjb" id="Y2c-sa-6iX"/>
+                                            <outlet property="beerName" destination="Gxj-Pa-zYm" id="O5z-e6-w9U"/>
+                                            <outlet property="favorite" destination="Xog-gP-kcf" id="k7e-F7-Kb3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="hTm-2l-JhK" id="5GI-RG-689"/>
+                                    <outlet property="dataSource" destination="hTm-2l-JhK" id="9KJ-Yv-BHF"/>
+                                    <outlet property="delegate" destination="hTm-2l-JhK" id="DKK-qK-7kF"/>
                                 </connections>
                             </collectionView>
                             <view hidden="YES" alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfI-bE-0MW">
@@ -105,7 +106,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="WQA-Dq-JcO" id="f78-Tj-5xl"/>
-                        <outlet property="beerList" destination="MmA-Ct-zMx" id="oSF-C4-dRj"/>
+                        <outlet property="beerList" destination="MmA-Ct-zMx" id="TPW-Ec-Cll"/>
                         <outlet property="loadingView" destination="dfI-bE-0MW" id="2Zd-Dd-0dB"/>
                     </connections>
                 </viewController>

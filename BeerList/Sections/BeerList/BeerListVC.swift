@@ -18,6 +18,9 @@ class BeerListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter?.viewDidLoad()
+        if let flowLayout = self.beerList.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -95,9 +98,11 @@ extension BeerListVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let yourWidth = collectionView.bounds.width/3.0
-        let yourHeight = yourWidth
-        
-        return CGSize(width: yourWidth, height: yourHeight)
+        let margin = 10.0
+        let numberOfItems = 3.0
+        let width = (collectionView.bounds.width / CGFloat(numberOfItems)) - CGFloat((margin * 2)) // Margin left and right
+//        let yourHeight =
+
+        return CGSize(width: width, height: (width * 2)) // TODO: Search for dynamic calculation
     }
 }

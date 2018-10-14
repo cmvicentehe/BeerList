@@ -14,6 +14,7 @@ class BeerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var beerName: UILabel!
     
     var tapGestureCompletionBlock: (() -> ())?
+    var isFavorite: Bool?
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -21,27 +22,32 @@ class BeerCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(with beer: Beer) {
-         let isFavorite = beer.favorite ?? false
+        self.isFavorite = beer.favorite ?? false
         self.beer.image = #imageLiteral(resourceName: "no_image_available")
         self.beerName.text = beer.name
-        self.favorite.image = isFavorite ? #imageLiteral(resourceName: "favorite") : #imageLiteral(resourceName: "add_favorite")
-        self.layer.borderColor =  isFavorite ? UIColor.green.cgColor : UIColor.lightGray.cgColor
+        self.favorite.image = (self.isFavorite == true) ? #imageLiteral(resourceName: "favorite") : #imageLiteral(resourceName: "add_favorite")
+        self.layer.borderWidth = (self.isFavorite == true) ? 2.0 : 0.0
+        self.layer.borderColor =  (self.isFavorite == true)  ? UIColor.green.cgColor : UIColor.clear.cgColor
+        
+        self.beerName.preferredMaxLayoutWidth = 50
     }
     
     func set(image: UIImage) {
-        self.favorite.image = image
+        self.beer.image = image
     }
     
     func addTapGestureRecognizer(completion: (() -> ())?) {
         self.tapGestureCompletionBlock = completion
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(addBeerToFavorite))
-        self.beer.addGestureRecognizer(gestureRecognizer)
         self.favorite.addGestureRecognizer(gestureRecognizer)
     }
     
     @objc private func addBeerToFavorite() {
-        self.favorite.image = #imageLiteral(resourceName: "favorite")
-        self.layer.borderColor = UIColor.green.cgColor
+        let currentIsFavoriteValue = !(self.isFavorite ?? false)
+        self.isFavorite = currentIsFavoriteValue
+        self.favorite.image = (self.isFavorite == true)  ? #imageLiteral(resourceName: "favorite") : #imageLiteral(resourceName: "add_favorite")
+        self.layer.borderWidth = (self.isFavorite == true) ? 2.0 : 0.0
+        self.layer.borderColor =  (self.isFavorite == true)  ? UIColor.green.cgColor : UIColor.clear.cgColor
         
         guard let completionNotNil = self.tapGestureCompletionBlock else {
             print("Completion block is nil")

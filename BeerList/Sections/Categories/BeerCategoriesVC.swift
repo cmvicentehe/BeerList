@@ -31,7 +31,6 @@ extension BeerCategoriesVC: CategoriesUI {
         }
     }
     
-    
     func show(message: String) {
          self.presenter?.userDidReceiveError(message)
     }
@@ -49,7 +48,6 @@ extension BeerCategoriesVC: CategoriesUI {
             self.activityIndicator.stopAnimating()
         }
     }
-
 }
 
 extension BeerCategoriesVC: UITableViewDataSource {

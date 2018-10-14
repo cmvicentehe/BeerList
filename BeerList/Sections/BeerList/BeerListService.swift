@@ -98,8 +98,6 @@ extension BeerListService: BeerListServiceInput {
           self.page += 1
           print("Beer List --> \(beerList)")
           print("Page --> \(self.page)")
-         let result = Result<[Beer], BeerListError>.success(self.beerList)
-         self.interactor?.beerListRetrieved(with: result)
          self.fetchBeerList()
         }
     }
