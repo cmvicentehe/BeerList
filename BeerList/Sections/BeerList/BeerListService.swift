@@ -98,7 +98,7 @@ extension BeerListService: BeerListServiceInput {
           self.page += 1
           print("Beer List --> \(beerList)")
           print("Page --> \(self.page)")
-         self.fetchBeerList()
+          self.fetchBeerList()
         }
     }
     

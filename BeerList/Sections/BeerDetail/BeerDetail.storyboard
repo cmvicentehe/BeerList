@@ -19,13 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kuG-51-zyg">
-                                <rect key="frame" x="0.0" y="20" width="320" height="182"/>
+                                <rect key="frame" x="0.0" y="40" width="320" height="182"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2FU-RB-Nbh">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
                                     </imageView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="iDI-il-Zje">
+                                        <rect key="frame" x="141.5" y="72.5" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="iDI-il-Zje" firstAttribute="centerX" secondItem="kuG-51-zyg" secondAttribute="centerX" id="1mX-gS-DlQ"/>
+                                    <constraint firstItem="iDI-il-Zje" firstAttribute="centerY" secondItem="kuG-51-zyg" secondAttribute="centerY" id="2KZ-po-if6"/>
                                     <constraint firstItem="2FU-RB-Nbh" firstAttribute="top" secondItem="kuG-51-zyg" secondAttribute="top" id="JeY-9W-dpB"/>
                                     <constraint firstAttribute="bottom" secondItem="2FU-RB-Nbh" secondAttribute="bottom" id="NpB-r3-EXu"/>
                                     <constraint firstAttribute="height" constant="182" id="PP1-yg-VYR"/>
@@ -34,21 +40,24 @@
                                     <constraint firstItem="2FU-RB-Nbh" firstAttribute="leading" secondItem="kuG-51-zyg" secondAttribute="leading" id="q1T-LX-pfc"/>
                                     <constraint firstItem="2FU-RB-Nbh" firstAttribute="centerX" secondItem="kuG-51-zyg" secondAttribute="centerX" id="ub8-NW-vZg"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="SYg-l8-Pp4" id="Yts-bB-OnO"/>
+                                </connections>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Name of  the beer&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRm-4S-Nw5">
-                                <rect key="frame" x="80.5" y="220" width="159" height="20.5"/>
+                                <rect key="frame" x="80.5" y="240" width="159" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Category&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvg-f6-Sv1">
-                                <rect key="frame" x="121.5" y="252.5" width="77.5" height="17"/>
+                                <rect key="frame" x="121.5" y="272.5" width="77.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Description&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9h-ET-lYm">
-                                <rect key="frame" x="120" y="281.5" width="80.5" height="14.5"/>
+                                <rect key="frame" x="120" y="301.5" width="80.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -62,7 +71,7 @@
                             <constraint firstItem="kuG-51-zyg" firstAttribute="leading" secondItem="Yeb-U3-rjd" secondAttribute="leading" id="J2S-Pe-sht"/>
                             <constraint firstItem="P9h-ET-lYm" firstAttribute="top" secondItem="Rvg-f6-Sv1" secondAttribute="bottom" constant="12" id="JiJ-zh-Uht"/>
                             <constraint firstItem="Yeb-U3-rjd" firstAttribute="trailing" secondItem="kuG-51-zyg" secondAttribute="trailing" id="KXM-ZB-ODY"/>
-                            <constraint firstItem="kuG-51-zyg" firstAttribute="top" secondItem="Yeb-U3-rjd" secondAttribute="top" id="OCh-e2-jJL"/>
+                            <constraint firstItem="kuG-51-zyg" firstAttribute="top" secondItem="b1l-Hw-Gwj" secondAttribute="top" constant="40" id="OCh-e2-jJL"/>
                             <constraint firstItem="P9h-ET-lYm" firstAttribute="centerX" secondItem="Yeb-U3-rjd" secondAttribute="centerX" id="S7w-2P-lM0"/>
                             <constraint firstItem="kuG-51-zyg" firstAttribute="width" secondItem="b1l-Hw-Gwj" secondAttribute="width" id="UEl-lQ-F8G"/>
                             <constraint firstItem="Yeb-U3-rjd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rvg-f6-Sv1" secondAttribute="trailing" constant="10" id="VbE-G9-4AN"/>
@@ -76,6 +85,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yeb-U3-rjd"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="iDI-il-Zje" id="Py2-J1-nd8"/>
+                        <outlet property="beerCategory" destination="Rvg-f6-Sv1" id="NiH-w9-Nke"/>
+                        <outlet property="beerDescription" destination="P9h-ET-lYm" id="0Bn-Ya-MX2"/>
+                        <outlet property="beerImage" destination="2FU-RB-Nbh" id="dqM-8d-kTo"/>
+                        <outlet property="beerName" destination="dRm-4S-Nw5" id="Sb1-4e-V70"/>
+                        <outlet property="scrollView" destination="kuG-51-zyg" id="nqh-4A-1T5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeA-8b-RYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,12 +14,12 @@ struct BeerDetailWireframe {
     func showBeerDetail(beer: Beer) {
         let storyboard = UIStoryboard(name: Constants.beerDetailStoryboard, bundle: nil)
         if let beerDetailVC: BeerDetailVC = storyboard.instantiateViewController(withIdentifier: Constants.beerDetail) as? BeerDetailVC {
-
-            let interactor = BeerDetailInteractor(beer: beer)
+            let imageDownloader = ImageDownloaderImpl()
+            let interactor = BeerDetailInteractor(beer: beer, imageDownloader: imageDownloader)
             let presenter = BeerDetailPresenter(view: beerDetailVC,
                                               interactor: interactor,
                                               wireframe: self)
-            
+            interactor.presenter = presenter
             beerDetailVC.presenter = presenter
             self.navigationController.show(beerDetailVC, sender: nil)
         }

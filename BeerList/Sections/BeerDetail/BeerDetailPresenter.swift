@@ -10,10 +10,14 @@ import Foundation
 
 protocol BeerDetailUI: class {
     func show(_ beer: Beer)
+    func showActivityIndicator()
+    func hideActivityIndicator() 
 }
 
 protocol BeerDetailPresenterInput {
     func viewDidLoad()
+    func viewDidReciveMemoryWarning()
+    func fetchImage(from url: String, completion: @escaping (Data) -> Void)
 }
 
 class BeerDetailPresenter {
@@ -35,6 +39,22 @@ extension BeerDetailPresenter: BeerDetailPresenterInput {
         let beer = self.interactor.beer
         self.view?.show(beer)
     }
+    
+    func viewDidReciveMemoryWarning() {
+        self.interactor.clearImageCache()
+    }
+    
+    func fetchImage(from url: String, completion: @escaping (Data) -> Void) {
+        self.interactor.fetchImage(from: url, completion: completion)
+    }
 }
 
-
+extension BeerDetailPresenter: BeerDetailInteractorOutput {
+    func showActivityIndicator() {
+        self.view?.showActivityIndicator()
+    }
+    
+    func hideActivityIndicator() {
+        self.view?.hideActivityIndicator()
+    }
+}

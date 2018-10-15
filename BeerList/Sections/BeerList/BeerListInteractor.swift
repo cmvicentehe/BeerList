@@ -77,7 +77,7 @@ extension BeerListInteractor: BeerListServiceOutput {
         case .success(let beerList):
             let filteredBeerList = self.filter(beerList: beerList)
             self.beerList = filteredBeerList
-            self.presenter?.retrievedBeerList(filteredBeerList)
+            self.presenter?.retrievedBeerList(beerList)
         case .error(let error):
             self.presenter?.retrievedError(error)
         }
