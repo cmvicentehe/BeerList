@@ -24,6 +24,7 @@ protocol BeerListPresenterInput {
     func cell(for beer: Beer, completion: @escaping(Data) -> Void)
     func viewDidReciveMemoryWarning()
     func userDidAddBeerToFavorites(beer: Beer)
+    func userDidSelect(_ beer: Beer)
 }
 
 class BeerListPresenter {
@@ -79,5 +80,9 @@ extension BeerListPresenter: BeerListInteractorOutput {
     func retrievedError(_ error: BeerListError) {
         self.view?.hideActivityIndicator()
         self.view?.show(message: error.localizedDescription)
+    }
+    
+    func userDidSelect(_ beer: Beer) {
+        self.wireframe.showBeerDetails(beer)
     }
 }

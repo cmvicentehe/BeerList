@@ -107,3 +107,13 @@ extension BeerListVC: UICollectionViewDelegateFlowLayout {
         return CGSize(width: width, height: cellHeight) // TODO: Search for dynamic calculation
     }
 }
+
+extension BeerListVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let row = indexPath.row
+        let beerList = self.presenter?.beerList
+        guard let beer = beerList?[row] else { return print("Invalid Beer") }
+        
+        self.presenter?.userDidSelect(beer)
+    }
+}

@@ -169,7 +169,7 @@
 			children = (
 				D4E79E182170A464006F4225 /* BeerDetail */,
 				D4E79E192170A464006F4225 /* BeerList */,
-				D4E79E1A2170A464006F4225 /* Categories */,
+				D4E79E1A2170A464006F4225 /* BeerCategories */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 			path = BeerList;
 			sourceTree = "<group>";
 		};
-		D4E79E1A2170A464006F4225 /* Categories */ = {
+		D4E79E1A2170A464006F4225 /* BeerCategories */ = {
 			isa = PBXGroup;
 			children = (
 				D4E79E382170B248006F4225 /* BeerCategories.storyboard */,
@@ -212,7 +212,7 @@
 				D4E79E342170B125006F4225 /* BeerCategoriesWireframe.swift */,
 				D4E79E522170DD72006F4225 /* BeerCategoriesService.swift */,
 			);
-			path = Categories;
+			path = BeerCategories;
 			sourceTree = "<group>";
 		};
 		D4E79E222170A49A006F4225 /* Config */ = {

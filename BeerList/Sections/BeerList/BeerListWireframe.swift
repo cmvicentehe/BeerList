@@ -10,7 +10,7 @@ import UIKit
 
 protocol BeerListWireframeInput {
     func showError(message: String)
-    func showBeerDetails()
+    func showBeerDetails(_ beer: Beer)
 }
 
 class BeerListWireframe {
@@ -33,7 +33,6 @@ class BeerListWireframe {
             
             service.interactor = interactor
             beerListVC.presenter = presenter
-            presenter.interactor = interactor
             interactor.presenter = presenter
             
             self.navigationController.show(beerListVC, sender: nil)
@@ -48,7 +47,8 @@ extension BeerListWireframe: BeerListWireframeInput {
         self.navigationController.present(alertController, animated: true, completion: nil)
     }
     
-    func showBeerDetails() {
-        // Implement!
+    func showBeerDetails(_ beer: Beer) {
+        let beerDetailWireframe = BeerDetailWireframe(navigationController: self.navigationController)
+        beerDetailWireframe.showBeerDetail(beer: beer)
     }
 }

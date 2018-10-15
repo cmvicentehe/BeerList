@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+protocol BeerDetailInteractorInput {
+    var beer: Beer { get }
+}
+
+class BeerDetailInteractor: BeerDetailInteractorInput {
+    var beer: Beer
+    
+    init(beer: Beer) {
+        self.beer = beer
+    }
+}
