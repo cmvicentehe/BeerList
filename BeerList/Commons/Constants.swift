@@ -36,4 +36,9 @@ struct Constants {
     // MARK: Cell identifiers
     static let categoryCell = "CategoryCell"
     static let beerCollectionViewCell = "BeerCollectionViewCell"
+    
+    // MARK: Cell margins
+    static let margin = 10.0
+    static let numberOfItems = 3.0
+    static let cellHeight = 132.0
 }

@@ -18,9 +18,6 @@ class BeerListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter?.viewDidLoad()
-        if let flowLayout = self.beerList.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -98,14 +95,26 @@ extension BeerListVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let margin = 10.0
-        let numberOfItems = 3.0
-        let cellHeight = CGFloat(132)
-        let width = (collectionView.bounds.width / CGFloat(numberOfItems)) - CGFloat((margin * 2)) // Margin left and right
-//        let yourHeight =
+       
+        let cellHeight = CGFloat(Constants.cellHeight)
+        let width = (collectionView.bounds.width / CGFloat(Constants.numberOfItems)) - CGFloat((Constants.margin * 2)) // Margin left and right
 
         return CGSize(width: width, height: cellHeight) // TODO: Search for dynamic calculation
     }
+    
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        let margin = CGFloat(Constants.margin)
+        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        let margin = Constants.margin
+        return CGFloat(margin)
+    }
+
 }
 
 extension BeerListVC: UICollectionViewDelegate {

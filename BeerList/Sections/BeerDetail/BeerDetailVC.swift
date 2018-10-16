@@ -41,7 +41,11 @@ extension BeerDetailVC: BeerDetailUI {
         self.beerCategory.text = beer.style?.category.name
         self.beerDescription.text = beer.beerDescription
         
-        guard let url = beer.label?.largeUrl else { return print("Invalid url") }
+        guard let url = beer.label?.largeUrl else {
+            print("Invalid url")
+            return
+        }
+        
         self.presenter?.fetchImage(from: url) { data in
             if let image = UIImage(data: data) {
                 self.hideActivityIndicator()
