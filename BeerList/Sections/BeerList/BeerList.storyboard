@@ -43,7 +43,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxj-Pa-zYm">
-                                                    <rect key="frame" x="54" y="99" width="35.5" height="17"/>
+                                                    <rect key="frame" x="54" y="99" width="35" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -58,6 +58,8 @@
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="Gxj-Pa-zYm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BPu-5u-jeE" secondAttribute="leading" constant="6" id="5yd-0S-KaN"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gxj-Pa-zYm" secondAttribute="trailing" constant="6" id="8K1-rm-ZS2"/>
                                             <constraint firstItem="Gxj-Pa-zYm" firstAttribute="top" secondItem="X7h-7W-qjb" secondAttribute="bottom" constant="12" id="FXK-jo-16s"/>
                                             <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Gxj-Pa-zYm" secondAttribute="bottom" constant="16" id="HMq-ZQ-ApY"/>
                                             <constraint firstItem="X7h-7W-qjb" firstAttribute="centerX" secondItem="BPu-5u-jeE" secondAttribute="centerX" id="PeR-6p-bdv"/>
