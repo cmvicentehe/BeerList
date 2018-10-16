@@ -24,7 +24,6 @@ class BeerDetailVC: UIViewController {
         self.presenter?.viewDidLoad()
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 10.0
-        // TODO: Add an scroll inside the main view
     }
     
     override func didReceiveMemoryWarning() {
